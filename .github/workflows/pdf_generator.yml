@@ -10,26 +10,10 @@ jobs:
     name: Generate PDFs
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Generate Full PDF Template      
-        uses: ./
-        with:        
-
-          # The latex template to use (defaults to one here)
-          latex_template: resume.tex
-
-          # One of "minimal" or "pdf" for the template with image, etc.
-          pdf_type: pdf
-
-          # A variables file to use
-          variables_file: templates/joss-variables.txt
- 
-          # A mapping file to use
-          mapping_file: templates/joss-mapping.txt
-
-      - name: Upload full templated pdf as artifact
-        uses: actions/upload-artifact@v2-preview
+      - name: PDFlatex
+        # You may pin to the exact commit or the version.
+        # uses: Closoco/pdflatex-action@27af51efacd7fe7d86953532c432f0e514c5cf4e
+        uses: Closoco/pdflatex-action@v1.1.0
         with:
-          name: full-pdf
-          path: Akash_Resume.pdf
+          # name of the tex file
+          texFile: resume.tex
