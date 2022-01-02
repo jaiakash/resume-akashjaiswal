@@ -1,19 +1,21 @@
 name: pdf_generation
 
-on:
-  push:
-    branches:
-     - master
+on: [push]
 
 jobs:
-  GeneratePdfArtifacts:
-    name: Generate PDFs
+  build-resume:
     runs-on: ubuntu-latest
+    name: Create document
     steps:
-      - name: PDFlatex
-        # You may pin to the exact commit or the version.
-        # uses: Closoco/pdflatex-action@27af51efacd7fe7d86953532c432f0e514c5cf4e
-        uses: Closoco/pdflatex-action@v1.1.0
-        with:
-          # name of the tex file
-          texFile: resume.tex
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Convert to pdf
+      id: convert-to-pdf
+      uses: closoco/pdflatex-action@v1.0.0
+      with:
+        texFile: ./resume.tex
+    - name: Store pdf
+      uses: actions/upload-artifact@v2
+      with:
+        name: file.pdf
+        path: file.pdf
