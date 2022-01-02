@@ -1,29 +1,74 @@
- # See https://github.com/rseng/pdf-generator for release
- - name: Generate Full PDF Template      
-   uses: rseng/pdf-generator@master
-   with:        
+name: generate-pdf-artifacts
 
-     # The latex template to use (defaults to one here)
-     latex_template: templates/latex.template.joss
+on:
+  push:
+    branches:
+     - master
 
-     # The markdown file to render,path is relative to repository
-     # make sure that images are also relative to the root in the file
-     paper_markdown: paper/paper.md
+jobs:
+  GeneratePdfArtifacts:
+    name: Generate PDFs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Generate Full PDF Template      
+        uses: ./
+        with:        
 
-     # The paper pdf to save
-     paper_outfile: paper.pdf
+          # The latex template to use (defaults to one here)
+          latex_template: templates/latex.template.joss
 
-     # Bibliography file, if existing
-     bibtex: paper/paper.bib
+          # The markdown file to render,path is relative to repository
+          # make sure that images are also relative to the root in the file
+          paper_markdown: paper/paper.md
 
-     # A path to a png logo file
-     png_logo: paper/sorse.png
+          # The paper pdf to save
+          paper_outfile: paper.pdf
 
-     # One of "minimal" or "pdf" for the template with image, etc.
-     pdf_type: pdf
+          # Bibliography file, if existing
+          bibtex: paper/paper.bib
 
-     # A variables file to use
-     variables_file: templates/joss-variables.txt
+          # A path to a png logo file
+          png_logo: paper/sorse.png
+
+          # One of "minimal" or "pdf" for the template with image, etc.
+          pdf_type: pdf
+
+          # A variables file to use
+          variables_file: templates/joss-variables.txt
  
-     # A mapping file to use
-     mapping_file: templates/joss-mapping.txt
+          # A mapping file to use
+          mapping_file: templates/joss-mapping.txt
+
+      - name: Generate Minimal PDF
+ 
+        # Important! Update to release https://github.com/rseng/rse-action/releases
+        uses: ./
+        with:        
+
+          # The markdown file to render,path is relative to repository
+          paper_markdown: paper/paper.md
+
+          # The paper pdf to save
+          paper_outfile: minimal.pdf
+
+          # Bibliography file, if existing
+          bibtex: paper/paper.bib
+
+          # One of "minimal" or "pdf" for the template with image, etc.
+          pdf_type: minimal
+
+      - name: Upload minimal pdf as artifact
+        uses: actions/upload-artifact@v2-preview
+
+        # Path is relative to GITHUB_WORKSPACE
+        with:
+          name: minimal-pdf
+          path: minimal.pdf
+
+      - name: Upload full templated pdf as artifact
+        uses: actions/upload-artifact@v2-preview
+        with:
+          name: full-pdf
+          path: paper.pdf
