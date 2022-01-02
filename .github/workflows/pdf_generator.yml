@@ -1,21 +1,18 @@
-name: pdf_generation
-
+name: PDF Generator
 on: [push]
-
 jobs:
-  build-resume:
+  build_latex:
     runs-on: ubuntu-latest
-    name: Create document
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Convert to pdf
-      id: convert-to-pdf
-      uses: closoco/pdflatex-action@v1.0.0
-      with:
-        texFile: ./resume.tex
-    - name: Store pdf
-      uses: actions/upload-artifact@v2
-      with:
-        name: file.pdf
-        path: file.pdf
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: ./resume.tex
+          latexmk_use_xelatex: true
+      - name: Upload pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: main.pdf
