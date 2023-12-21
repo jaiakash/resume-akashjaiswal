@@ -1,143 +1,214 @@
-\documentclass[]{deedy-resume-openfont}
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
- 
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
 \pagestyle{fancy}
-\fancyhf{}
- 
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\eduSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \begin{document}
 
-\namesection{Akash}{Jaiswal}{akashjaiswal3846@gmail.com | Github \href{https://github.com/jaiakash}{\bf jaiakash} | LinkedIn \href{https://www.linkedin.com/in/akashjaiswal03}{\bf akashjaiswal03} | Bento.me \href{https://bento.me/akashjaiswal}{\bf akashjaiswal}} 
+\begin{center}
+    {\Huge \scshape Akash Jaiswal} \\ \vspace{4pt}
+    \small \href{mailto:akashjaiswal3846@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{akashjaiswal3846@gmail.com}} ~ 
+    \href{https://linkedin.com/in/akashjaiswal03}{\raisebox{-0.2\height}\faLinkedin\ \underline{/akashjaiswal03}}  ~
+    \href{https://github.com/jaiakash}{\raisebox{-0.2\height}\faGithub\ \underline{/jaiakash}}
+    \href{https://twitter.com/a_kashhhhhh_}{\raisebox{-0.2\height}\faTwitter\ \underline{/akashhhhhh}}
+    \vspace{-8pt}
+\end{center}
 
-\begin{minipage}[t]{0.3\textwidth} 
 
-\section{Education}
-
-\subsection{NIT TIRUCHIRAPALLI}
-\descript{Btech - Civil (Minor in CSE)}
-\location{2020 - 2024 (expected) | 8.01/10 }
-\sectionsep
-
-\subsection{St. Xavier\textquotesingle{}s School}
-\descript{CBSE Std XII | 2020 | 91\% }
-\sectionsep
-
-\subsection{St. Peter\textquotesingle{}s School}
-\descript{ICSE Std X | 2018 | 91\%}
-\sectionsep
-
-\section{Links} 
-Github \href{https://github.com/jaiakash}{\bf jaiakash} \\
-LinkedIn  \href{https://www.linkedin.com/in/akashjaiswal03}{\bf akashjaiswal03} \\
-Twitter  \href{https://twitter.com/a_kashhhhhh_}{\bf akashhhhhh} \\
-
-\section{Clubs/Societies}
-
-\subsection{Technical Council}
-\descript{Technical Secretary, NIT Trichy}
-\location{Responsible for overseeing three key domains: 13 Technical Clubs, Campus Development Affairs, and the annual Technical Fest Pragyan}
-\sectionsep
-
-\subsection{Delta Force NITT}
-\descript{App Dev \textbar{} Full Stack Web Dev}
-\location{Contributed to various full-stack projects like Delta Winter of Code and NITTFEST Website }
-\sectionsep
-
-\subsection{NITT Student Alumni Cell}
-\descript{Manager}
-\location{The Students Alumni Cell of NIT Trichy}
-\sectionsep
-
-\subsection{Athenæum - NIT Trichy}
-\descript{Delegate Member}
-\location{Official Model United Nations Society of NIT Trichy}
-\sectionsep
-
-\section{Skills}
-
-\subsection{Programming}
-Java  \textbullet{} Javascript C++ \textbullet{} Python  \\
-Kotlin \textbullet{} C \textbullet{} Dart \textbullet{} C\# \\ 
-\sectionsep
-
-\subsection{Tech Stacks}
-Android Dev (Native) \textbullet{}   Web Dev  ReactJS/NextJS \textbullet{} OJET
-\textbullet{} Flutter  NodeJS  \textbullet{} Unity3D \textbullet{} Firebase 
-\sectionsep
-
-\subsection{Tools}
-Git/Github  \textbullet{} Docker \textbullet{} Figma \textbullet{} CI/CD
-\textbullet{} Google Cloud \textbullet{} Azure \textbullet{} MongoDB \textbullet{} Oracle DB
-\textbullet{} Custom ROMs/Rooting \\ 
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.69\textwidth} 
-
+%-----------EXPERIENCE-----------
 \section{Experience}
+  \resumeSubHeadingListStart
 
-\runsubsection{Oracle India}\descript{| {\bf Summer Intern} {\bf | OJET | SpringBoot | Oracle DB}}\hfill \location{ May 2023 – July 2023 }
-\begin{tightemize}
-    \item Worked in Fusion Release Engineering team as Project
-    \\ Intern at Oracle, Hyderabad Office for Summer 2023.
-    \item Developed a full-stack application for managing exceptions and code violations and automated bug creation.
-    \item Developed the full workflow in an automatic way and in clean and elegant UI instead of previous complex Excel sheets, saving 80$\%$ of FA and TA Team time.
-\end{tightemize}
-\sectionsep
+    \resumeSubheading
+      {Oracle India Pvt Ltd}{May 2023 -- July 2023}
+      {Project Intern}{Hyderabad, Telangana}
+      \resumeItemListStart
+        \resumeItem{Worked in FRE team, where we brainstormed, developed and deployed a full-stack application for managing exceptions and code violations and automated bug creation..}
+        \resumeItem{Automated the full workflow and in clean, elegant UI instead of previously complex Excel sheets, saving 80$\%$ of FA developers and TA teams time spent over auditing code violations.}
+        \resumeItem{Tech Stack - OJET, SpringBoot, Oracle DB}
+      \resumeItemListEnd
 
-\runsubsection{Google Summer of Code 2022}\descript{| \href{https://summerofcode.withgoogle.com/programs/2022/projects/Sg34Qe09}{\bf CC Extractor | Flutter | Firebase}}\hfill \location{ June 2022 – Oct 2022 }
-\begin{tightemize}
-    \item Selected as contributor for GSoC'22 under CCExtractor.
-    \item Developed an app that lets the caller decide if the call is urgent or not. It enables the user to determine that the specific call is critical and that the person should be disrupted from whatever they might be doing.
-    \item This project was from scratch and i had to design as well as code. Got mentored from lead devs of org regarding tech, product design and as well as helped other people in community.
-\end{tightemize}
-\sectionsep
+    \resumeSubheading
+      {CC Extractor (Google Summer of Code)\href{https://summerofcode.withgoogle.com/programs/2022/projects/Sg34Qe09}}{June 2022 -- Oct 2022}
+      {Goggle Summer of Code 2022 Contributor}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed an app that lets the caller decide if the call is urgent or not. It enables the user to determine that the specific call is critical and that the person should be disrupted from whatever they might be doing.}
+        \resumeItem{This project was from scratch and i got unique opportunity to ideate the product as well as code. Got mentored from lead devs of org regarding tech, product design and helped other people in community while onboarding.}
+        \resumeItem{Tech Stack -  Flutter and Firebase}
+    \resumeItemListEnd
 
-\runsubsection{Connectezy}\descript{| SDE Intern | Flutter | MongoDB | NodeJS}\hfill \location{ August 2023 – Present }
-\begin{tightemize}
-    \item Worked as lead software developer for Connectezy, a startup focused on connecting people, especially alumni, resposible for product design, leading other developers and work in close assocaition with founder.
-    \item Lead the tech team, developed various features like hub, my network, chat and login, etc for the app. 
-\end{tightemize}
-\sectionsep
+    \resumeSubheading
+      {Connectezy}{Aug 2023 -- Oct 2023}
+      {Software Developer}{Tiruchirappalli, Tamil Nadu}
+      \resumeItemListStart
+        \resumeItem{Worked as lead software developer for Connectezy, a startup focused on connecting people, especially alumni, resposible for product design, leading other developers and working in close association with founder.}
+        \resumeItem{Lead the tech team, developed various features like hub, my network, chat and login, etc for the app.}
+        \resumeItem{Tech Stack -  Flutter, Figma, MongoDB and  NodeJS}
+    \resumeItemListEnd
 
-\runsubsection{Nyayaag Advocate}\descript{| SDE Intern | Flutter| MongoDB | NodeJS}\hfill \location{ April 2022 – June 2022 }
-\begin{tightemize}
-    \item Worked as web developer for Nyayaag Advocate startup, incubated under CEDI NIT Trichy.
-    \item Designed the website with features like advocate and citizen user registration, login, and dashboard pages for clients where they can search advocates.
-\end{tightemize}
+    \resumeSubheading
+      {Technical Council, NIT Trichy}{May 2023 -- Present}
+      {Technical Secretary}{Tiruchirappalli, Tamil Nadu}
+      \resumeItemListStart
+        \resumeItem{Selected as Technical Secretary 2023 - 2024, NIT Trichy, responsible for monitoring and managing the 17 technical clubs, Pragyan fest and overseeing various campus development initiatives at NIT Trichy.}
+        \resumeItem{I also coordinate with the Centre of Excellence, ISRO incubation centre, Centre for Entrepreneurship Development and Incubation and other labs to ensure a thriving platform for the  students of NIT Trichy.}
+        \resumeItem{Connducted TransfiNITTe, the annual flagship hackathon of NIT Trichy, with 50+ teams and 5 lakhs+ prizes pool.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
 
-\sectionsep
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    \resumeItemListStart
+        \resumeItem{Working on startup \textbf{Connectezy} which aims to connect alumni and students for collaboration, overseeing its development both from product and tech side.}
+        \resumeItem{Chief community lead and CTO for \textbf{Befikra Community}, to help students with their careers, which has 3000+ members around India.}
+        \resumeItem{Speaker at \textbf{Twitter Space} session on "Open Source in Web2.0, Web3.0, and Metaverse" by \textbf{GSSOC}}
+        \resumeItem{Speaker at \textbf{GDSC NIT Silchar and GDSC NIT Trichy} session on "Git it Done", attended by 200+ participants.}
+        \resumeItem{Lead \textbf{open source community}, \textbf{TeCOS, NIT Trichy}, where I helped students to get started in open source. 200+ students joined for events and 500+ member community.}
+        \resumeItem{Got a fully funded scholarship by \textbf{IIIT Hyderabad} and \textbf{Wikimedia Foundation} to attend 2nd Wikimedia Summit.}
+        
+    \resumeItemListEnd
 
-\section{Extracurricular}\runsubsection{Achievements | Events | Startups/Community}
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Javascript, C++, Python, Kotlin, C, Dart, C\# } \\
+     \textbf{Tools}{: Git/Github, Figma, Google Cloud, AWS, CI/CD,  Docker,  Custom ROMs/Rooting} \\
+     \textbf{Technologies}{: ReactJS/NextJS, Flutter, NodeJS, Android Dev, Web Dev, Unity3D, Firebase } \\
+    }}
+ \end{itemize}
+ \vspace{-20pt}
 
-\begin{tightemize}
-    \item Working on startup \textbf{Connectezy} which aims to connect alumni and students.
-\end{tightemize}
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=10pt]
+                \item Data Structures and Algorithms
+                \item Software Project Management
+                \item Operating Systems
+                \item Web Technology
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+%\resumeSubHeadingListEnd
 
-\begin{tightemize}
-    \item Chief community lead and CTO for \textbf{Befikra Community}, which has 3000+ members around India.
-\end{tightemize}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Tiruchirappalli}{Nov 2020 - May 2024 (Expected)}
+      {Bachelor of Technology, Civil Engineering with minor in Computer Science, 7.8/10}{Tiruchirappalli, Tamil Nadu}
+  \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \eduSubheading
+      {St. Xavier\textquotesingle{}s School, Ramnagar}{Class 12th, CBSE, 91\%, May, 2020}
+  \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \eduSubheading
+      {St. Peter\textquotesingle{}s School, Akbarpur}{Class 10th, ICSE, 91\%, May, 2018}
+  \resumeSubHeadingListEnd
 
-\begin{tightemize}
-    \item Got a fully funded scholarship by \textbf{IIIT Hyderabad and Wikimedia Foundation} and attended \textbf{2nd Wikimedia Summit}.
-\end{tightemize}
-
-\begin{tightemize}
-    \item Speaker at \textbf{Twitter Space} session on "Open Source in Web2.0, Web3.0, and Metaverse" by \textbf{GSSOC}
-\end{tightemize}
-
-\begin{tightemize}
-    \item Lead \textbf{open source community} in my college, \textbf{TeCOS}, where I helped students to get started in open source. 200+ students joined for events and 500+ member community.
-\end{tightemize}
-
-\begin{tightemize}
-    \item Attended \textbf{ETH India 2022}, Bangalore, World’s Biggest Ethereum Hackathon 
-\end{tightemize}
-
-\begin{tightemize}
-    \item 1st Prize in IIT Roorkee Cogni 2022 Cryptotrader and 2nd Prize in NIT ConclaveX 2022 - Covalent (Technical Bounty)
-\end{tightemize}
-
-\sectionsep
-\end{minipage} 
 
 \end{document}
