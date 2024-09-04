@@ -1,0 +1,207 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\eduSubheading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Akash Jaiswal} \\ \vspace{4pt}
+    \small \href{mailto:akashjaiswal3846@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{akashjaiswal3846@gmail.com}} ~ 
+    \href{https://linkedin.com/in/akashjaiswal03}{\raisebox{-0.2\height}\faLinkedin\ \underline{/akashjaiswal03}}  ~
+    \href{https://github.com/jaiakash}{\raisebox{-0.2\height}\faGithub\ \underline{/jaiakash}} ~
+    \href{https://twitter.com/a_kashhhhhh_}{\raisebox{-0.2\height}\faTwitter\ \underline{/akashhhhhh}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {\href{https://dharmikapp.in/}{Dharmik Website}}{Aug 2023 -- Nov 2023}
+      {Software Developer}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Led the development of the Dharmik Website from concept to completion, creating a fully functional full-stack website in React.}
+        \resumeItem{Implemented key features including responsive website, payment gateway with Razorpay, dynamic content translation, and authentication system.}
+        \resumeItem{Utilized a tech stack of ReactJS for frontend development, Figma for design, and Firebase for backend services.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+      {\href{https://drive.google.com/file/d/108neUmfJqgKASZ2P7VFuHIYA8RGoLkk_/view?usp=drive_link}{Oracle India Pvt Ltd}}{May 2023 -- July 2023}
+      {Software Developer Intern}{Hyderabad, Telangana}
+      \resumeItemListStart
+        \resumeItem{Contributed to the FRE team by designing, developing, and deploying a full-stack application for auditing code violations and exceptions, which reduced the time spent by FA developers and TA teams by 80\%.}
+        \resumeItem{Streamlined and automated the auditing workflow through a clean GUI, replacing the previous manual process that relied on complex Excel sheets.}
+        \resumeItem{Worked with a tech stack including ReactJS, SpringBoot, and Oracle DB, and for soft skills enhanced collaborative and communication skills while adapting to a professional corporate environment.}
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {\href{https://summerofcode.withgoogle.com/programs/2022/projects/Sg34Qe09}{CC Extractor (Google Summer of Code)}}{June 2022 -- Oct 2022}
+      {Google Summer of Code 2022 Contributor}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed and developed an application that enables users to assess and indicate the urgency of incoming calls, enhancing call management and prioritization.}
+        \resumeItem{Gained valuable experience by ideating and coding the project from the ground up, receiving mentorship from senior developers on technology, product design, and community support.}
+        \resumeItem{Utilized Flutter for app development, Figma for design, and Firebase for backend services, contributing to both technical development and community onboarding.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    \resumeItemListStart
+        \resumeItem{Lead \textbf{open source community}, TeCOS, NIT Trichy, where I helped students to get started in open source. \textbf{200+ students} joined for events and right now its \textbf{1000+ member community}.}
+        \resumeItem{Got a fully funded scholarship by \textbf{IIIT Hyderabad} and \textbf{Wikimedia Foundation} to attend 2nd Wikimedia Summit.}
+        \resumeItem{Speaker at \textbf{Twitter Space} session on "Open Source in Web2.0, Web3.0, and Metaverse" by GSSOC}
+        \resumeItem{Speaker at \textbf{GDSC NIT Silchar} and \textbf{GDSC NIT Trichy} session on "Git it Done", attended by \textbf{200+ participants}.}  
+        \resumeItem{Selected as Technical Secretary 2023 - 2024, NIT Trichy, responsible for monitoring and managing the 17 technical clubs, Pragyan fest and overseeing various campus development initiatives at NIT Trichy.}
+        \resumeItem{Connducted TransfiNITTe, the annual flagship hackathon of NIT Trichy, with 50+ teams and 5 lakhs+ prizes pool.}
+        \resumeItem{Worked on startup \textbf{Connectezy} which aims to connect alumni and students for collaboration, overseeing its development both from product and tech side.}
+        \resumeItem{Chief community lead and CTO for Befikra Community, to help students with their careers, which has \textbf{3000+ members} around India.}
+    \resumeItemListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Javascript, C++, Python, Dart, C\# } \\
+     \textbf{Tools}{: Git/Github, CI/CD,  Docker, Kubernetes, AWS, Google Cloud, Custom ROMs/Rooting} \\
+     \textbf{Technologies}{: ReactJS/NextJS, Flutter, NodeJS, Android Dev, Unity3D, Firebase } \\
+    }}
+ \end{itemize}
+ \vspace{-20pt}
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=10pt]
+                \item Data Structures and Algorithms
+                \item Software Project Management
+                \item Operating Systems
+                \item Web Technology
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+%\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Tiruchirappalli}{Nov 2020 - June 2024}
+      {Bachelor of Technology, Civil Engineering (minor in Computer Science), 7.8/10}{Tiruchirappalli, Tamil Nadu}
+  \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \eduSubheading
+      {St. Xavier\textquotesingle{}s School, Ramnagar}{Class 12th, CBSE, 91\%, May, 2020}
+  \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \eduSubheading
+      {St. Peter\textquotesingle{}s School, Akbarpur}{Class 10th, ICSE, 91\%, May, 2018}
+  \resumeSubHeadingListEnd
+
+
+\end{document}
