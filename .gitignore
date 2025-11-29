@@ -1,2 +1,23 @@
 # Ignore macOS Finder metadata files everywhere in the repo
 **/.DS_Store
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ind
+*.ilg
+*.bcf
+*.run.xml
