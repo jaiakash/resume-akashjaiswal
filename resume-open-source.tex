@@ -1,0 +1,168 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Akash Jaiswal} \\ \vspace{4pt}
+
+    \small Open Source Engineer \& Community Lead | Kubeflow (CNCF) GSoC Mentor \& Contributor \\ \vspace{3pt}
+
+    \href{mailto:akashjaiswal3846@gmail.com}
+    {\raisebox{-0.2\height}\faEnvelope\ \underline{akashjaiswal3846@gmail.com}} ~
+    \href{https://linkedin.com/in/akashjaiswal03}
+    {\raisebox{-0.2\height}\faLinkedin\ \underline{/akashjaiswal03}} ~
+    \href{https://github.com/jaiakash}
+    {\raisebox{-0.2\height}\faGithub\ \underline{/jaiakash}} ~
+    \href{https://twitter.com/a_kashhhhhh_}
+    {\raisebox{-0.2\height}\faTwitter\ \underline{/akashhhhhh}}
+
+    \vspace{-8pt}
+\end{center}
+
+%-----------OPEN SOURCE CONTRIBUTIONS & GOVERNANCE-----------
+\section{Open Source Contributions \& Governance}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {\href{https://summerofcode.withgoogle.com/programs/2025/projects/fwZkvPr0}{Kubeflow, CNCF (Google Summer of Code)}}{April 2025 -- Present}
+    {Open Source Mentor \& Contributor | GSoC 2025, 2026}{Remote}
+    \resumeItemListStart
+    
+    \resumeItem{\textbf{OCI Tenancy Administrator}: Appointed as infrastructure and tenancy administrator for \textbf{\href{https://github.com/kubeflow}{Kubeflow's}} community OCI footprint; managing GPU-enabled Kubernetes clusters, IAM policies, Argo CD GitOps deployments, and contributor onboarding.}
+
+    \resumeItem{\textbf{GSoC 2026 Mentor}: Co-mentoring upstream projects introducing \textbf{\href{https://github.com/kubeflow/mcp-server}{Model Context Protocol (kubeflow/mcp-server)}} integration and \textbf{\href{https://opentelemetry.io}{OpenTelemetry observability}} into Kubeflow SDK, guiding contributors on distributed tracing and agent-driven workflow management.}
+
+    \resumeItem{\textbf{GSoC 2025 Contributor}: Built automated GPU CI infrastructure on Oracle Kubernetes Engine (OKE) for Kubeflow LLM Blueprint testing, enabling upstream maintainers to validate LLM pipelines prior to release (\href{https://summerofcode.withgoogle.com/programs/2025/projects/fwZkvPr0}{\underline{GSoC 2025 Project Link}}).}
+
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Multi-Project Upstream Contributions}{2022 -- Present}
+    {Open Source Ecosystem Contributor}{Global / Remote}
+    \resumeItemListStart
+      \resumeItem{\textbf{Upstream Ecosystem Contributions}: Contributed code, bug fixes, and infrastructure improvements across \textbf{\href{https://github.com/kubeflow}{Kubeflow}}, \textbf{OWASP}, \textbf{Keploy}, \textbf{Oppia}, and \textbf{Processing Foundation}.}
+      
+      \resumeItem{\textbf{\href{https://www.linkedin.com/feed/update/urn:li:activity:6933613937011617792/}{GSoC 2022 Contributor (CCExtractor)}}: Built cross-platform mobile notification tooling and Node.js microservices for priority communication workflows (\href{https://www.linkedin.com/feed/update/urn:li:activity:6933613937011617792/}{\underline{Project Post Link}}).}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Oracle India Pvt Ltd}{June 2024 -- Present}
+    {Platform Engineer II}{Hyderabad, Telangana}
+    \resumeItemListStart
+    \resumeItem{Engineered Kubernetes-native CI/CD infrastructure for \textbf{Fusion Release Engineering}, supporting \textbf{5,000+ developers} across \textbf{1,200+ projects} using \textbf{Kubernetes, OCI, Podman, Java (Helidon), and Node.js}.}
+    \resumeItem{Developed core modules of \textbf{Ocean} (Kubernetes-native CI engine replacing Jenkins) and \textbf{Darwin ITS} (pre-production pipeline simulator and AI workflow analyzer).}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SPEAKING & COMMUNITY LEADERSHIP-----------
+\section{Conference Speaking, Leadership \& Honors}
+    \resumeItemListStart
+    \resumeItem{\textbf{Conference Speaker}: Featured speaker at \href{https://ossindia2026.sched.com/event/2KNF7}{\textbf{Open Source Summit India 2026}}, \href{https://gdg.community.dev/events/details/google-gdg-cloud-nagpur-presents-techfusion-summit-2026/}{\textbf{TechFusion Summit 2026 (GDG Cloud Nagpur)}}, and \textbf{CNCF Hyderabad Meetup}.}
+    
+    \resumeItem{\textbf{Foundation Scholarships}: Granted international travel scholarships by \textbf{Linux Foundation}, \textbf{CNCF}, and \textbf{Wikimedia Foundation} to attend \href{https://www.linkedin.com/posts/akashjaiswal03_opensourcesummit-openssf-opensearchcon-ugcPost-7392580382480658433-a8-J}{\textbf{Open Source Summit Korea 2025}}, \href{https://blog.kubeflow.org/kubecon/community/2025/08/23/kubecon-2025-india-kubeflow.html}{\textbf{KubeCon India 2025}}, \href{https://www.cncf.io/blog/2025/03/17/kubecon-cloudnativecon-india-2024-from-dreams-to-reality-journey/}{\textbf{KubeCon India 2024}}, and \href{https://indicwiki.iiit.ac.in/summit-2023/}{\textbf{Wikimedia Summit 2023}}.}
+    
+    \resumeItem{\textbf{Community Builder}: Founded and scaled \textbf{\href{https://www.instagram.com/tecos.nitt/}{TeCOS}} open-source community to \textbf{1,000+ members}, mentoring students in Git, open-source practices, and GSoC preparation.}
+    
+    \resumeItem{\textbf{University Leadership}: Served as \textbf{Technical Secretary} at NIT Trichy, overseeing 17 technical clubs and managing Pragyan technical festival (budget: INR 50+ lakhs).}
+    \resumeItemListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Open Source \& Cloud Native}{: Kubernetes, Kubeflow, Helm, Argo CD, Docker/Podman, OpenTelemetry, GitOps} \\
+\textbf{Languages}{: Go, Python, Java, JavaScript, TypeScript} \\
+\textbf{Platforms \& Databases}{: Oracle Cloud Infrastructure (OCI), AWS, GCP, Oracle DB, PostgreSQL, MongoDB} \\
+\textbf{Certifications}{: Certified Kubernetes Application Developer (CKAD), AI/ML Toolkits with Kubeflow (LFS147)}
+}}
+\end{itemize}
+ \vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Tiruchirappalli}{Nov 2020 -- June 2024}
+      {B.Tech in Civil Engineering (Minor: Computer Science) $|$ CGPA: 8.1/10}{Tamil Nadu, India}
+  \resumeSubHeadingListEnd
+
+\end{document}
