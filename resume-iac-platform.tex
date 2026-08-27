@@ -1,0 +1,162 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Akash Jaiswal} \\ \vspace{4pt}
+
+    \small Platform Engineer II @ Oracle | Go, Terraform, IaC \& Cloud Native Platforms \\ \vspace{3pt}
+
+    \href{mailto:akashjaiswal3846@gmail.com}
+    {\raisebox{-0.2\height}\faEnvelope\ \underline{akashjaiswal3846@gmail.com}} ~
+    \href{https://linkedin.com/in/akashjaiswal03}
+    {\raisebox{-0.2\height}\faLinkedin\ \underline{/akashjaiswal03}} ~
+    \href{https://github.com/jaiakash}
+    {\raisebox{-0.2\height}\faGithub\ \underline{/jaiakash}} ~
+    \href{https://twitter.com/a_kashhhhhh_}
+    {\raisebox{-0.2\height}\faTwitter\ \underline{/akashhhhhh}}
+
+    \vspace{-8pt}
+\end{center}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{IaC \& Dev Tooling}{: Go (Golang), Terraform, Infrastructure as Code (IaC), GitHub Actions, GitOps (Argo CD), Kubernetes, Helm, Docker/Podman, CI/CD} \\
+\textbf{Platform Engineering}{: Schema Design \& Evolution, Versioning, Backwards Compatibility, Provider SDKs, State Management, Microservices, REST APIs} \\
+\textbf{Languages}{: Go, Python, TypeScript, JavaScript, Java} \\
+\textbf{Cloud \& Databases}{: Oracle Cloud Infrastructure (OCI), AWS, GCP, PostgreSQL, Oracle Database, MongoDB} \\
+\textbf{Testing \& Observability}{: Unit/Integration/E2E Testing, OpenTelemetry, Prometheus, Grafana} \\
+\textbf{Certifications}{: Certified Kubernetes Application Developer (CKAD), AI/ML Toolkits with Kubeflow (LFS147)}
+}}
+\end{itemize}
+ \vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Oracle India Pvt Ltd}{June 2024 -- Present}
+    {Platform Engineer II}{Hyderabad, Telangana}
+    \resumeItemListStart
+
+    \resumeItem{Engineered Kubernetes-native CI/CD platform services in \textbf{Fusion Release Engineering}, supporting \textbf{5,000+ developers} across \textbf{1,200+ projects} using \textbf{Go, Kubernetes, OCI, Podman, Java (Helidon), and Node.js}.}
+    
+    \resumeItem{Built core microservices for \textbf{Ocean} (cloud-native CI engine replacing legacy Jenkins), implementing concurrent task scheduling, workspace sandboxing, and automated node autoscaling across enterprise clusters.}
+    
+    \resumeItem{Developed \textbf{Darwin ITS}, a pre-production pipeline simulator and AI-assisted workflow analyzer adopted by \textbf{50+ developers} to validate build specifications and prevent deployment regressions.}
+    
+    \resumeItemListEnd
+
+\resumeSubheading
+    {\href{https://summerofcode.withgoogle.com/programs/2025/projects/fwZkvPr0}{Kubeflow, CNCF (Google Summer of Code)}}{April 2025 -- Present}
+    {Open Source Contributor \& Mentor | GSoC 2025, 2026}{Remote}
+    \resumeItemListStart
+    
+    \resumeItem{Serving as \textbf{OCI Tenancy Administrator} for \textbf{\href{https://www.kubeflow.org}{Kubeflow}} community infrastructure, managing production Kubernetes clusters on OCI, IAM policy lifecycle, networking, Argo CD GitOps workflows, and secrets.}
+
+    \resumeItem{\textbf{GSoC 2025 Contributor}: Built automated GPU CI infrastructure on Oracle Kubernetes Engine (OKE) for Kubeflow LLM Blueprint testing, enabling upstream maintainers to validate LLM pipelines prior to release (\href{https://summerofcode.withgoogle.com/programs/2025/projects/fwZkvPr0}{\underline{GSoC 2025 Project Link}}).}
+    
+    \resumeItem{\textbf{GSoC 2026 Mentor}: Co-mentoring upstream Go-based integrations for \textbf{\href{https://github.com/kubeflow/mcp-server}{Model Context Protocol (kubeflow/mcp-server)}} and \textbf{\href{https://opentelemetry.io}{OpenTelemetry observability}} for the Kubeflow SDK; authoring technical RFCs for schema design and distributed tracing.}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------OPEN SOURCE LEADERSHIP & COMMUNITY-----------
+\section{Open Source Leadership \& Community}
+    \resumeItemListStart
+    \resumeItem{\textbf{Open Source Governance}: Active contributor across \textbf{\href{https://github.com/kubeflow}{Kubeflow}}, OWASP, Keploy, Oppia, and Processing Foundation; experienced in building in public, async RFC reviews, and upstream issue triage.}
+    
+    \resumeItem{\textbf{Conference Speaker}: Featured speaker at \href{https://ossindia2026.sched.com/event/2KNF7}{\textbf{Open Source Summit India 2026}}, \href{https://gdg.community.dev/events/details/google-gdg-cloud-nagpur-presents-techfusion-summit-2026/}{\textbf{TechFusion Summit 2026 (GDG Cloud Nagpur)}}, and \textbf{CNCF Hyderabad Meetup}.}
+    
+    \resumeItem{\textbf{Community Leadership}: Founded \textbf{\href{https://www.instagram.com/tecos.nitt/}{TeCOS}} open-source community (\textbf{1,000+ members}); served as Technical Secretary at NIT Trichy managing 17 tech clubs.}
+    
+    \resumeItem{\textbf{Community Recognition}: Granted travel scholarships by \textbf{Linux Foundation}, \textbf{CNCF}, and \textbf{Wikimedia} for \href{https://www.linkedin.com/posts/akashjaiswal03_opensourcesummit-openssf-opensearchcon-ugcPost-7392580382480658433-a8-J}{\textbf{Open Source Summit Korea 2025}}, \href{https://blog.kubeflow.org/kubecon/community/2025/08/23/kubecon-2025-india-kubeflow.html}{\textbf{KubeCon India 2025}}, \href{https://www.cncf.io/blog/2025/03/17/kubecon-cloudnativecon-india-2024-from-dreams-to-reality-journey/}{\textbf{KubeCon India 2024}}, and \href{https://indicwiki.iiit.ac.in/summit-2023/}{\textbf{Wikimedia Summit 2023}}.}
+    \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Tiruchirappalli}{Nov 2020 -- June 2024}
+      {B.Tech in Civil Engineering (Minor: Computer Science) $|$ CGPA: 8.1/10}{Tamil Nadu, India}
+  \resumeSubHeadingListEnd
+
+\end{document}
